@@ -11,7 +11,9 @@ type response struct {
 }
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-    http.Error(w, "Error de prueba: handler roto", http.StatusInternalServerError)
+    w.Header().Set("Content-Type", "application/json")
+    resp := response{Message: "Hello World I like in Go! Good bye! "}
+    json.NewEncoder(w).Encode(resp)
 }
 
 func main() {
