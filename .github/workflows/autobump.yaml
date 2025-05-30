@@ -23,9 +23,6 @@ jobs:
         #   default_bump: patch
         #   release_branches: main
   
-      - name: Show new tag
-        run: echo "🆕 New tag: ${{ steps.tag.outputs.new_tag }}"
-
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
