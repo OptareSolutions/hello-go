@@ -33,6 +33,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
-            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/optaresolutions/hello-go:${{ github.ref_name }}
+            ghcr.io/optaresolutions/hello-go:latest
+
 
